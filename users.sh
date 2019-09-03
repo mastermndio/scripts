@@ -6,7 +6,7 @@ PASSWORD=$3
 addUser()
 {
   # Checks to see is Password is empty. If so, it generates a random password
-  if [ -z $3 ];
+  if [ -z "$3" ];
   then
     PASSWORD=$(date +%s | sha256sum | base64 | head -c 32)
   fi
